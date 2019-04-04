@@ -1,0 +1,25 @@
+<!-- <mat-list role="list" *ngIf="photos$">
+    <cdk-virtual-scroll-viewport 
+    style="height: 180vh"
+    itemSize=120>
+    <mat-card-content 
+      *cdkVirtualFor="let photo of photos$ | async">
+      <img class="header-image" [src]="photo.thumbnailUrl">
+    </mat-card-content>
+  </cdk-virtual-scroll-viewport>
+</mat-list> -->
+
+<mat-list role="list">
+    <cdk-virtual-scroll-viewport 
+      style="height: 80vh"
+      itemSize=120>
+      <mat-list-item *cdkVirtualFor="let photo of photos$ | async" role="listitem">
+        <mat-card class="example-card">
+          <mat-card-content>
+            <p appImage fontSize="3"> Hola </p>
+            <!--<img mat-card-image appImage [src]="photo.thumbnailUrl">-->
+          </mat-card-content>
+        </mat-card>
+      </mat-list-item>
+    </cdk-virtual-scroll-viewport>
+  </mat-list>
